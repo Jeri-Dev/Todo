@@ -1,0 +1,152 @@
+body{
+    transition: .3s;
+    max-width: 70vw;
+}
+
+.taskList, .task {
+    transition: .4s;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+.form2 {
+    display: flex;
+    gap: 3em;
+}
+
+input[type = "text"] , input[type = "password"]{
+    width: 80vw;
+}
+
+.doneButton, .deleteButton{
+    font-size: 30px;
+    border-radius:200px;
+    background-color: transparent;
+    border: none;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 0 30px;
+    background-color: rgba(7, 8, 22, 0.545);
+    border-radius: 20px;
+    width: 65vw;
+    font-size: 18px;
+    
+}
+
+.task > div {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+
+.tasksList {
+    margin-top: 40px ;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="color"] {
+    height: 2.6em
+} 
+
+.radio-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.radio-container > input {
+    display: none;
+}
+
+label {
+    transition: .1s;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+
+.radio1 {
+    background-color: #c73d3b;
+}
+.radio2 {
+    background-color: #3b7cc7;
+}
+.radio3 {
+    background-color: #15d160;
+
+}
+.radio4 {
+    background-color: #d18f15;
+
+}
+
+#radio-1:checked ~ .radio1,
+#radio-2:checked ~ .radio2,
+#radio-3:checked ~ .radio3,
+#radio-4:checked ~ .radio4  {
+
+    border : 3px solid white;
+    opacity: 0.67;
+}
+
+
+.sunIcon {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    justify-content: center;
+    border-radius: 50%;
+    width: 50px;
+    height:50px ;
+    cursor: pointer;
+}
+
+@media (max-width : 760px) {
+    form {
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 30px
+    }
+    .task {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .task p {
+        margin: 10;
+    }
+    
+.doneButton, .deleteButton{
+    font-size: 25px;
+    padding: 0 30px;
+}
+}
+
+@media (max-width : 400px) {
+    form .form2 {
+        flex-direction: column;
+        gap: 1em;
+    }
+    h1 {
+        font-size: 20px
+    }
+}
